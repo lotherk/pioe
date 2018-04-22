@@ -1,0 +1,6 @@
+project:
+    name: PIOEngine
+
+templates:
+ - c: .etmpl/c.erb
+ - /^h(pp)?$/: .etmpl/h.reb

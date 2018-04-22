@@ -1,0 +1,45 @@
+
+/* config.h: ADD DESCRIPTION HERE
+ *
+ * Copyright (C) 2017 Konrad Lother <konrad@hiddenbox.org>
+ *
+ * This file is part of PIOE.
+ *
+ * PIOE is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * PIOE is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with PIOE.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * @brief	Add brief description!
+ *
+ * More detailed description
+ *
+ * @date	01/26/2017
+ * @file	config.h
+ * @author	Konrad Lother
+ */
+
+#ifndef PIOENGINE_CONFIG_H
+#define PIOENGINE_CONFIG_H
+
+#define PROJECT_VERSION	"@PROJECT_VERSION@"
+
+#define PIOE_FRAME_RESOLUTION_MS 10
+
+#define LOGGER_FORMAT_DEFAULT "@LOGGER_FORMAT_DEFAULT@"
+#define LOGGER_FORMAT_DATE "@LOGGER_FORMAT_DATE@"
+#define LOGGER_FORMAT_TIME "@LOGGER_FORMAT_TIME@"
+
+
+#endif

@@ -1,0 +1,45 @@
+version "@PROJECT_VERSION@ Copyright (C) 2016-2017 Konrad Lother <k@hiddenbox.org>"
+package "pioe"
+usage "pioe [OPTIONS]... -e [ENGINES]... -s [SCRIPTS]..."
+purpose "Programmable Input Output Events"
+versiontext "This software is supplied WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. This is
+free software, and you are welcome to redistribute it under certain
+conditions; see the file COPYING for details."
+
+
+section "General"
+option "config" c "Configuration file" string typestr="filename" optional
+option "daemon" d "Fork process into background" flag off
+
+section "Engine"
+option "engine" e "Engine to load (can be used multiple times)" string multiple optional typestr="name"
+option "list-engines" l "List available engines" optional details=""
+
+section "Script"
+option "script" s "Script to load (can be used multiple times)" string typestr="filename" multiple optional
+
+section "Logging"
+option "log-file" L "Log to file instead of stdout" string optional typestr="filename"
+option "log-format-date" - "Date format" typestr="format" string optional default="@LOGGER_FORMAT_DATE@"
+option "log-format-time" - "Time format" typestr="format" string optional default="@LOGGER_FORMAT_TIME@"
+option "log-format" - "Log format" typestr="format" string optional details=" Format variables:
+	%D  - Date (See --log-format-date)
+	%T  - Time (See --log-format-time)
+	%X  - Microseconds part of current second
+	%F  - Frame ID
+	%N  - Logger Name
+	%L  - Log Level
+	%M  - Log Message
+	%f  - File
+	%m  - Function/Method
+	%l  - Line Number
+
+Default format: @LOGGER_FORMAT_DEFAULT@
+"
+
+section "Other"
+option "debug" - "Enable debug messages" flag on
+
+text "
+See the pioe man page for examples."
